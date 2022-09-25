@@ -1,1 +1,24 @@
 ---
+
+- name: vscode | uninstall package
+  tags:
+  - package
+  package:
+    name: "{{ vscode_pkg }}"
+    state: absent
+
+- name: vscode | remove apt repo
+  tags:
+  - apt
+  apt_repository:
+    repo: "{{ vscode_apt_repo }}"
+    filename: "{{ vscode_apt_name }}"
+    state: absent
+
+- name: vscode | remove apt key
+  tags:
+  - apt
+  file:
+    path: "{{ vscode_apt_keyring }}"
+    state: absent
+

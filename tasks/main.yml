@@ -1,1 +1,22 @@
 ---
+
+- name: vscode | apt key
+  tags:
+  - apt
+  get_url:
+    url: "{{ vscode_apt_key }}"
+    dest: "{{ vscode_apt_keyring }}"
+
+- name: vscode | apt repo
+  tags:
+  - apt
+  apt_repository:
+    repo: "{{ vscode_apt_repo }}"
+    filename: "{{ vscode_apt_name }}"
+
+- name: vscode | install package
+  tags:
+  - package
+  package:
+    name: "{{ vscode_pkg }}"
+    state: latest

@@ -1,1 +1,8 @@
 ---
+vscode_apt_key: "https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg"
+vscode_apt_repo: "https://download.vscodium.com/debs"
+vscode_apt_name: vscodium
+vscode_pkg: codium
+
+vscode_apt_keyring: "/etc/apt/trusted.gpg.d/{{ vscode_apt_name }}.asc"
+vscode_apt_src: "deb [ signed-by={{ vscode_apt_keyring }} ] {{ vscode_apt_repo }} {{ vscode_apt_name }} main"

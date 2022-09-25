@@ -1,11 +1,10 @@
-# Ansible role: template
-Brief description of role.
+# Ansible role: vscode
+Open-source build of MS VSCode IDE (vscodium).
 
 ## Requirements
 Only tested on Debian stable, for now.
 
 ## Role Variables
-+ `variable`: description
 
 ## Playbooks
 + `main.yml`: apply role
@@ -16,6 +15,7 @@ None.
 
 ## License
 + Ansible role licensed [MIT](LICENSE)
++ VSCodium licensed [MIT](https://github.com/vscodium/vscodium/blob/master/LICENSE)
 
 ## Author Information
 + Ansible role by [Sean Ho](https://github.com/ho-ansible/)
