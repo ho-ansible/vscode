@@ -2,9 +2,9 @@
 # Configure template role
 # Replace 'all' with your own inventory group
 ---
-- name: template | template role
-  hosts: all
+- name: vscode | IDE
+  hosts: vscode
   roles:
-  - role: template
+  - role: vscode
     tags:
-    - template
+    - vscode
