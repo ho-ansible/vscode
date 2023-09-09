@@ -11,7 +11,7 @@
   tags:
   - apt
   apt_repository:
-    repo: "{{ vscode_apt_repo }}"
+    repo: "{{ vscode_apt_src }}"
     filename: "{{ vscode_apt_name }}"
 
 - name: vscode | install package
